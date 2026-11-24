@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arquetipos.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <title>Arquétipos - Ranger</title>
+    <link rel="stylesheet" href="navegacao-paginas.css">
+    <link rel="stylesheet" href="padrao-acessibilidade.css">
+    <link rel="stylesheet" href="menu-ajuste.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-making-rpg.png">
+    <link rel="stylesheet" href="identidade-global.css">
+</head>
+<body>
+    <div class="container">
+    <div class="lateral"></div>
+     <div class="logo">
+            <a href="index.html">
+                <img src="img/Cópia de MAKING RPG.png" alt="Making RPG - ir para a página inicial"></a>
+
+            </div>
+
+    <header>
+            <nav class="menu" aria-label="Menu principal">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menuLista"
+                >
+                    <span class="icone-menu" aria-hidden="true">☰</span>
+                    <span class="texto-menu">Menu</span>
+                </button>
+
+                <ul id="menuLista">
+
+                    <li>
+                        <a href="fichas.html" aria-current="page">Fichas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="campanhas.html">Campanhas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="mapas.html">Mapas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="missoes.html">Missões</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </header>
+
+    <div class="arquetipos">
+    <h1>Arquétipos</h1>
+    <h2>Ranger</h2>
+    </div>
+
+    <div class="carousel">
+
+    <div class="card" data-id="1">
+        <h2>Caçador (hunter)</h2>
+
+        <div class="content">
+            <p>
+                Especialistas em eliminar qualquer tipo de presa. Estudam monstros, feras e inimigos para encontrar seus pontos fracos, adaptando o estilo de combate à situação.
+                <br>
+                <span class="vantagens">Vantagens:</span> Causa dano adicional contra inimigos feridos e pode escolher habilidades que aumentam sua eficiência ofensiva ou defensiva conforme evolui.
+                <br>
+                <span class="desvantagens">Desvantagens:</span> Muitas de suas habilidades dependem da posição dos inimigos ou de condições específicas para alcançar seu potencial máximo.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card" data-id="2">
+        <h2>Senhor das Feras (Beast Master)</h2>
+
+        <div class="content">
+            <p>
+                Esses Rangers criam um vínculo profundo com uma fera companheira, lutando lado a lado como uma única equipe. O animal não é apenas um aliado, mas um parceiro treinado que protege seu mestre, auxilia na exploração e participa diretamente dos combates.
+                <br>
+                <span class="vantagens">Vantagens:</span> Possui uma fera fiel que pode ajudar em combate, exploração e rastreamento, oferecendo grande versatilidade e utilidade dentro e fora das batalhas.
+                <br>
+                <span class="desvantagens">Desvantagens:</span> Grande parte do poder do arquétipo depende da sobrevivência e atuação da fera. Se ela estiver incapacitada ou distante, a eficiência do Ranger diminui consideravelmente.
+            </p>
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="acoes">
+        <p class="dica" id="dicaAtributos">Deslize para o lado para ver todos os arquétipos e toque em um card para ler os detalhes.</p>
+        <a href="atributos.html" class="btn-atributos desativado" id="btnAtributos" aria-disabled="true">Atributos &rarr;</a>
+    </div>
+
+    <div class="lateral"></div>
+
+</div>
+
+<script src="arquetipos.js"></script>
+<script src="atributos.js"></script>
+    <script src="navegacao-paginas.js" defer></script>
+    <script src="menu.js" defer></script>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app',
+            'https://vlibras.gov.br/config/default_logo.json',
+            'random',
+            'R'
+        );
+    </script>
+
+
+    <footer class="footer">
+        <span>© 2026 Making RPG Project. Todos os direitos reservados.</span>
+        <span class="footer__sep"><img src="img/decor_menu.png" alt=""></span>
+        <a href="https://mail.google.com/mail/?view=cm&to=tccmakingrpgproject@gmail.com" target="_blank" rel="noopener">
+            <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="M3 7l9 6 9-6"/>
+            </svg>
+            tccmakingrpgproject@gmail.com
+        </a>
+    </footer>
+
+</body>
+</html>

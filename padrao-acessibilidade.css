@@ -1,0 +1,240 @@
+/* PADRÃO DE ACESSIBILIDADE E MENU RESPONSIVO */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* LOGO / LINKS */
+.logo a:focus-visible {
+    outline: 4px solid #2F301D;
+    outline-offset: 5px;
+}
+
+/* MENU */
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 900px;
+    padding: 12px;
+    border-radius: 40px;
+    background-color: #555632;
+    margin: 0;
+}
+
+.menu a {
+    width: 100px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    border-radius: 10px;
+    background-color: #6E7047;
+    font-family: "Almendra", serif;
+    font-weight: bold;
+    outline: none;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.menu a[aria-current="page"] {
+    background-color: #3F4028;
+    box-shadow: inset 0 -4px 0 #D4AF37;
+}
+
+@media (hover: hover) {
+    .menu a:hover {
+        background-color: #3F4028;
+        transform: translateY(-2px);
+    }
+}
+
+.menu a:focus-visible {
+    outline: 4px solid #2F301D;
+    outline-offset: 4px;
+    background-color: #3F4028;
+}
+
+.menu a:focus {
+    outline: 3px solid #2F301D;
+    outline-offset: 3px;
+}
+
+.menu a:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.menu a:active {
+    background-color: #2F301D;
+    transform: scale(0.97);
+}
+
+.decor {
+    max-width: 20px;
+    height: auto;
+}
+
+/* BOTÃO MENU MOBILE */
+.menu-toggle {
+    display: none;
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 16px;
+    border: 2px solid #3F4028;
+    border-radius: 12px;
+    background-color: #555632;
+    color: #FFFFFF;
+    font-family: "Almendra", serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    touch-action: manipulation;
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.menu-toggle .texto-menu {
+    margin-right: auto;
+}
+
+.menu-toggle .icone-menu {
+    font-size: 22px;
+}
+
+.menu-toggle:focus {
+    outline: 3px solid #2F301D;
+    outline-offset: 3px;
+}
+
+.menu-toggle:focus-visible {
+    outline: 4px solid #2F301D;
+    outline-offset: 4px;
+}
+
+.menu-toggle:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.menu-toggle:active {
+    background-color: #3F4028;
+}
+
+/* FOCO DOS CONTROLES */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+    outline: 4px solid #2F301D;
+    outline-offset: 3px;
+}
+
+.menu a:focus-visible,
+.menu-toggle:focus-visible {
+    outline: 4px solid #2F301D;
+}
+
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+[tabindex]:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* CELULAR */
+@media (max-width: 480px) {
+
+    .menu {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        max-width: none;
+        margin-top: 10px;
+        padding: 0;
+        border-radius: 20px;
+
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+
+        transition:
+            max-height 0.3s ease,
+            opacity 0.2s ease,
+            padding 0.3s ease;
+    }
+
+    .menu.menu-aberto ul {
+        max-height: 500px;
+        padding: 12px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu .decor {
+        display: none;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        width: 100%;
+        min-height: 44px;
+        max-width: none;
+    }
+}
+
+
+/* MOVIMENTO REDUZIDO */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

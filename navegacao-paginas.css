@@ -1,0 +1,110 @@
+.navegacao-paginas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+    clear: both;
+}
+
+.navegacao-paginas .bnt-fichas,
+.navegacao-paginas .bnt-voltar,
+.navegacao-paginas .btn-atributos,
+.navegacao-paginas .bnt-atributos,
+.navegacao-paginas .bnt-arquetipos,
+#passo-tipo > .bnt-voltar,
+#passo-relacao > .bnt-voltar {
+    position: static !important;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 18px;
+    margin: 0;
+    background: #96975F;
+    color: #FFFFFF;
+    border: 2px solid #6E7047;
+    border-radius: 10px;
+    font-family: "Almendra", serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+#passo-tipo > .bnt-voltar,
+#passo-relacao > .bnt-voltar {
+    margin-top: 4px;
+}
+
+.navegacao-paginas .bnt-voltar { order: 0; }
+.navegacao-paginas > :last-child { order: 1; }
+
+@media (hover: hover) {
+    .navegacao-paginas .bnt-fichas:hover,
+    .navegacao-paginas .bnt-voltar:hover,
+    .navegacao-paginas .btn-atributos:hover,
+    .navegacao-paginas .bnt-atributos:hover,
+    .navegacao-paginas .bnt-arquetipos:hover,
+    #passo-tipo > .bnt-voltar:hover,
+    #passo-relacao > .bnt-voltar:hover {
+        background: #6E7047;
+    }
+}
+
+.navegacao-paginas .bnt-fichas:active,
+.navegacao-paginas .bnt-voltar:active,
+.navegacao-paginas .btn-atributos:active,
+.navegacao-paginas .bnt-atributos:active,
+.navegacao-paginas .bnt-arquetipos:active,
+#passo-tipo > .bnt-voltar:active,
+#passo-relacao > .bnt-voltar:active {
+    background: #555632;
+}
+
+.navegacao-paginas button:focus,
+.navegacao-paginas a:focus,
+#passo-tipo > .bnt-voltar:focus,
+#passo-relacao > .bnt-voltar:focus {
+    outline: 3px solid #2F301D;
+    outline-offset: 3px;
+}
+
+.navegacao-paginas button:focus-visible,
+.navegacao-paginas a:focus-visible,
+#passo-tipo > .bnt-voltar:focus-visible,
+#passo-relacao > .bnt-voltar:focus-visible {
+    outline: 4px solid #2F301D;
+    outline-offset: 4px;
+}
+
+.navegacao-paginas button:focus:not(:focus-visible),
+.navegacao-paginas a:focus:not(:focus-visible),
+#passo-tipo > .bnt-voltar:focus:not(:focus-visible),
+#passo-relacao > .bnt-voltar:focus:not(:focus-visible) {
+    outline: none;
+}
+
+@media (max-width: 480px) {
+    .navegacao-paginas {
+        margin-top: 20px;
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .navegacao-paginas .bnt-fichas,
+    .navegacao-paginas .bnt-voltar,
+    .navegacao-paginas .btn-atributos,
+    .navegacao-paginas .bnt-atributos,
+    .navegacao-paginas .bnt-arquetipos,
+    #passo-tipo > .bnt-voltar,
+    #passo-relacao > .bnt-voltar {
+        width: 100%;
+        min-height: 48px;
+        font-size: 16px;
+    }
+}

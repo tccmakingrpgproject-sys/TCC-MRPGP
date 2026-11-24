@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    -webkit-text-size-adjust: 100%;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    background-color: darkolivegreen;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* Logo */
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo img{
+    width: clamp(120px, 20vw, 180px);
+}
+
+/* Containers */
+
+.container{
+    background-color: #F1DCA7;
+    width: 92%;
+    max-width: 1250px;
+    margin: clamp(16px, 4vw, 40px) auto;
+    padding: clamp(15px, 4vw, 40px);
+    border-radius: clamp(16px, 3vw, 25px);
+}
+
+.cont{
+    background-color: #F1DCA7;
+    min-height: 380px;
+    padding: clamp(15px, 4vw, 40px);
+    border-radius: 20px;
+    position: relative;
+}
+
+.cont h1{
+    font-size: clamp(32px, 7vw, 50px);
+    color: #555632;
+    font-family: "Almendra";
+    margin-bottom: 5px;
+}
+
+.cont p{
+    margin-bottom: clamp(24px, 5vw, 40px);
+    color: #6666429b;
+    font-size: clamp(16px, 2.6vw, 20px);
+}
+
+/* Menu */
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: clamp(24px, 4vw, 40px);
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 900px;
+    padding: 12px;
+    border-radius: 40px;
+    background-color: #77784D;
+}
+
+.menu a{
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    background-color: #9BA879;
+    font-family: "Almendra";
+    font-weight: bold;
+}
+
+/* Botão do menu */
+
+.menu-toggle{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #77784D;
+    color: white;
+    font-family: "Almendra";
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Atributos */
+
+.atributos{
+    container-type: inline-size;
+    width: min(700px, 100%);
+    aspect-ratio: 700 / 460;
+    margin: auto;
+    position: relative;
+}
+
+.centro{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 33.5cqw;
+}
+
+.centro img{
+    width: 100%;
+    display: block;
+}
+
+.atributo{
+    width: 17.14cqw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #AAB08A;
+    border: 1.15cqw solid #6F7C53;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+}
+
+.atributo input{
+    width: 7.2cqw;
+    font-size: 4.85cqw;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: inherit;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.atributo input::-webkit-inner-spin-button,
+.atributo input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.atributo span{
+    font-family: "Almendra";
+    font-size: 3.15cqw;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+/* Posições */
+
+.for { top: -1.1%;  left: 27.86%; }
+.des { top: -1.1%;  right: 27.86%; }
+.con { top: 32.6%;  right: 3.57%; }
+.int { bottom: -1.1%; right: 27.86%; }
+.von { bottom: -1.1%; left: 27.86%; }
+.car { top: 32.6%;  left: 3.57%; }
+
+/* Legenda dos atributos */
+
+.legenda{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 10px clamp(20px, 5vw, 60px);
+    margin: clamp(24px, 4vw, 36px) auto 0;
+    color: #666642d8;
+    font-size: clamp(16px, 2.2vw, 20px);
+    margin-top: 55px;
+}
+
+.legenda strong{
+    font-family: "Almendra";
+    margin-right: 6px;
+    color: #666642;
+}
+
+/* Tablet */
+
+@media (max-width: 768px){
+
+    .menu-toggle{
+        display: inline-flex;
+    }
+
+    .menu ul{
+        display: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 10px;
+        gap: 8px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .menu ul.aberto{
+        display: flex;
+    }
+
+    .menu .decor{
+        display: none;
+    }
+
+    .menu li{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu a{
+        width: 100%;
+        max-width: 260px;
+        height: 42px;
+    }
+}
+
+/* Celular */
+
+@media (max-width: 520px){
+
+    .atributos{
+        container-type: normal;
+        width: 100%;
+        aspect-ratio: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 18px 10px;
+    }
+
+    .centro{
+        display: none;
+    }
+
+    .legenda{
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .atributo{
+        position: static;
+        width: clamp(100px, 34vw, 130px);
+        border-width: 6px;
+    }
+
+    .atributo input{
+        width: 56px;
+        font-size: 30px;
+    }
+
+    .atributo span{
+        font-size: 20px;
+    }
+}
+
+.cont > .bnt-arquetipos{
+    display: block;
+    margin: 24px 0 0 auto;
+}

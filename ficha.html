@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ficha.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <link rel="stylesheet" href="padrao-acessibilidade.css">
+    <link rel="stylesheet" href="./ficha-mobile.css">
+
+    <script src="ficha-mobile.js" defer></script>
+    <script src="./ficha-storage.js" defer></script>
+    <script src="./ficha.js" defer></script>
+
+    <title>Ficha</title>
+
+    <link rel="stylesheet" href="menu-ajuste.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-making-rpg.png">
+    <link rel="stylesheet" href="identidade-global.css">
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                src="img/Cópia de MAKING RPG.png"
+                alt="Making RPG - ir para a página inicial"
+            >
+
+        </a>
+
+    </div>
+
+
+
+    <!-- MENU PRINCIPAL -->
+
+    <header>
+            <nav class="menu" aria-label="Menu principal">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menuLista"
+                >
+                    <span class="icone-menu" aria-hidden="true">☰</span>
+                    <span class="texto-menu">Menu</span>
+                </button>
+
+                <ul id="menuLista">
+
+                    <li>
+                        <a href="fichas.html" aria-current="page">Fichas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="campanhas.html">Campanhas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="mapas.html">Mapas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="missoes.html">Missões</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </header>
+
+
+
+    <!-- FOTO -->
+
+    <main class="container-foto">
+
+        <div
+            class="upload-area"
+            id="uploadArea"
+        >
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/*"
+                hidden
+            >
+
+
+            <div
+                class="buttons"
+                id="buttons"
+            >
+
+                <button
+                    class="upload-button"
+                    id="uploadButton"
+                    type="button"
+                >
+                    insira uma imagem
+                </button>
+
+
+                <span class="or">
+                    ou...
+                </span>
+
+
+                <button
+                    class="create-button"
+                    id="createButton"
+                    type="button"
+                >
+                    crie com o nosso picrew
+                </button>
+
+            </div>
+
+
+            <img
+                id="preview"
+                class="preview"
+                alt="Imagem selecionada"
+            >
+
+        </div>
+
+
+        <button
+            class="remove-button"
+            id="removeImageButton"
+            type="button"
+        >
+            remover imagem
+        </button>
+
+    </main>
+
+
+
+    <!-- NOME -->
+
+    <div class="nome">
+
+        <input
+            type="text"
+            id="nomePersonagem"
+            name="nomePersonagem"
+            placeholder="Digite o nome do personagem..."
+            maxlength="100"
+            autocomplete="off"
+        >
+
+
+        <button
+            class="button-salvar"
+            id="salvarBtn"
+            type="button"
+        >
+            Salvar
+        </button>
+
+    </div>
+
+
+
+    <!-- STATUS -->
+
+    <main class="status-container">
+
+
+        <!-- VIDA -->
+
+        <div class="status-row">
+
+            <span class="status-name">
+                Vida:
+            </span>
+
+
+            <button
+                class="change-btn"
+                onclick="alterarStatus('vida', -1)"
+                type="button"
+            >
+                −
+            </button>
+
+
+            <div class="status-value">
+
+                <span
+                    class="number"
+                    id="vidaAtual"
+                >
+                    00
+                </span>
+
+
+                <span class="separator">
+                    /
+                </span>
+
+
+                <span
+                    class="number"
+                    id="vidaMax"
+                >
+                    00
+                </span>
+
+
+                <button
+                    class="change-btn"
+                    onclick="alterarStatus('vida', 1)"
+                    type="button"
+                >
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DEFESA -->
+
+        <div class="status-row">
+
+            <span class="status-name">
+                Defesa:
+            </span>
+
+
+            <button
+                class="change-btn"
+                onclick="alterarStatus('defesa', -1)"
+                type="button"
+            >
+                −
+            </button>
+
+
+            <div class="status-value">
+
+                <span
+                    class="number"
+                    id="defesaAtual"
+                >
+                    00
+                </span>
+
+
+                <span class="separator">
+                    /
+                </span>
+
+
+                <span
+                    class="number"
+                    id="defesaMax"
+                >
+                    00
+                </span>
+
+
+                <button
+                    class="change-btn"
+                    onclick="alterarStatus('defesa', 1)"
+                    type="button"
+                >
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SANIDADE -->
+
+        <div class="status-row">
+
+            <span class="status-name">
+                Sanidade:
+            </span>
+
+
+            <button
+                class="change-btn"
+                onclick="alterarStatus('sanidade', -1)"
+                type="button"
+            >
+                −
+            </button>
+
+
+            <div class="status-value">
+
+                <span
+                    class="number"
+                    id="sanidadeAtual"
+                >
+                    00
+                </span>
+
+
+                <span class="separator">
+                    /
+                </span>
+
+
+                <span
+                    class="number"
+                    id="sanidadeMax"
+                >
+                    00
+                </span>
+
+
+                <button
+                    class="change-btn"
+                    onclick="alterarStatus('sanidade', 1)"
+                    type="button"
+                >
+                    +
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- ÁREA PRINCIPAL -->
+
+    <main class="paginas">
+
+
+        <!-- ÁREA CENTRAL -->
+
+        <section class="conteudo-principal">
+
+
+            <div class="titulo-container">
+
+                <h1 id="titulo-secao">
+                    Perícias
+                </h1>
+
+            </div>
+
+
+            <div id="conteudo"></div>
+
+
+        </section>
+
+
+
+        <!-- MENU DIREITO -->
+
+        <aside class="menu-lateral">
+
+
+            <!-- HISTÓRIA -->
+
+            <button
+                class="menu-botao-ficha"
+                data-secao="historia"
+                id="btn-historia"
+                type="button"
+            >
+
+                <span>
+                    História
+                </span>
+
+            </button>
+
+
+
+            <!-- INVENTÁRIO -->
+
+            <button
+                class="menu-botao-ficha"
+                data-secao="inventario"
+                id="btn-inventario"
+                type="button"
+            >
+
+                <span>
+                    Inventário
+                </span>
+
+            </button>
+
+
+
+            <!-- ATAQUES -->
+
+            <button
+                class="menu-botao-ficha"
+                data-secao="ataques"
+                id="btn-ataques"
+                type="button"
+            >
+
+                <span>
+                    Ataques
+                </span>
+
+            </button>
+
+
+
+            <!-- PERÍCIAS -->
+
+            <button
+                class="menu-botao-ficha"
+                data-secao="pericias"
+                id="btn-pericias"
+                type="button"
+            >
+
+                <span>
+                    Perícias
+                </span>
+
+            </button>
+
+
+
+            <!-- ATRIBUTOS -->
+
+            <div class="atributos">
+
+
+                <!-- FORÇA -->
+
+                <div class="atributo for">
+
+                    <input
+                        type="number"
+                        min="0"
+                        max="6"
+                        id="for"
+                        value="1"
+                    >
+
+                    <span>
+                        FOR
+                    </span>
+
+                </div>
+
+
+
+                <!-- DESTREZA -->
+
+                <div class="atributo des">
+
+                    <input
+                        type="number"
+                        min="0"
+                        max="6"
+                        id="des"
+                        value="1"
+                    >
+
+                    <span>
+                        DES
+                    </span>
+
+                </div>
+
+
+
+                <!-- CONSTITUIÇÃO -->
+
+                <div class="atributo con">
+
+                    <input
+                        type="number"
+                        min="0"
+                        max="6"
+                        id="con"
+                        value="1"
+                    >
+
+                    <span>
+                        CONS
+                    </span>
+
+                </div>
+
+
+
+                <!-- INTELIGÊNCIA -->
+
+                <div class="atributo int">
+
+                    <input
+                        type="number"
+                        min="0"
+                        max="6"
+                        id="int"
+                        value="1"
+                    >
+
+                    <span>
+                        INT
+                    </span>
+
+                </div>
+
+
+
+                <!-- VONTADE -->
+
+                <div class="atributo von">
+
+                    <input
+                        type="number"
+                        min="0"
+                        max="6"
+                        id="von"
+                        value="1"
+                    >
+
+                    <span>
+                        VON
+                    </span>
+
+                </div>
+
+
+
+                <!-- CARISMA -->
+
+                <div class="atributo car">
+
+                    <input
+                        type="number"
+                        min="0"
+                        max="6"
+                        id="car"
+                        value="1"
+                    >
+
+                    <span>
+                        CAR
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </aside>
+
+
+    </main>
+
+
+</div>
+
+
+    <script src="menu.js" defer></script>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app',
+            'https://vlibras.gov.br/config/default_logo.json',
+            'random',
+            'R'
+        );
+    </script>
+
+
+    <footer class="footer">
+        <span>© 2026 Making RPG Project. Todos os direitos reservados.</span>
+        <span class="footer__sep"><img src="img/decor_menu.png" alt=""></span>
+        <a href="https://mail.google.com/mail/?view=cm&to=tccmakingrpgproject@gmail.com" target="_blank" rel="noopener">
+            <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="M3 7l9 6 9-6"/>
+            </svg>
+            tccmakingrpgproject@gmail.com
+        </a>
+    </footer>
+
+</body>
+
+</html>

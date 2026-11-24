@@ -1,0 +1,159 @@
+/* SUBTÍTULO */
+
+.subtitulo{
+
+    font-family: 'Franklin Gothic Medium';
+
+    color: #6666429b;
+
+    font-size: 20px;
+
+    margin-top: 10px;
+
+    margin-bottom: 5px;
+}
+
+
+/* OPÇÕES */
+
+.opcoes{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin-top: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.opcao{
+
+    flex: 1 1 280px;
+
+    min-height: 200px;
+
+    background-color: #AEB27A;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    text-align: left;
+
+    font-family: "Almendra";
+
+    cursor: pointer;
+}
+
+
+.opcao:hover{
+
+    background-color: #A4A96D;
+}
+
+
+.opcao:focus-visible{
+
+    outline: 3px solid #2F301D;
+
+    outline-offset: 3px;
+}
+
+
+.opcao-titulo{
+
+    font-size: 32px;
+
+    font-weight: bold;
+}
+
+
+.opcao-descricao{
+
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium';
+
+    opacity: .9;
+}
+
+
+/* ALIADO E INIMIGO */
+
+.opcao-aliado{
+
+    border-left: 12px solid #3E6AA8;
+}
+
+
+.opcao-inimigo{
+
+    border-left: 12px solid #A0443A;
+}
+
+
+/* BOTÃO VOLTAR */
+
+.bnt-voltar{
+
+    display: inline-block;
+
+    text-decoration: none;
+}
+
+
+/* ESCONDER PASSOS */
+
+[hidden]{
+
+    display: none !important;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 480px){
+
+    .subtitulo{
+
+        font-size: 22px;
+    }
+
+
+    .opcao{
+
+        min-height: 150px;
+
+        padding: 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .opcao-titulo{
+
+        font-size: 26px;
+    }
+
+
+    .opcao-descricao{
+
+        font-size: 16px;
+    }
+
+}

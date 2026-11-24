@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making RPG Project</title>
+    <link rel="icon" type="image/png" href="img/sol-png.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <link rel="stylesheet" href="padrao-acessibilidade.css">
+    <link rel="stylesheet" href="menu-ajuste.css">
+
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-making-rpg.png">
+    <link rel="stylesheet" href="identidade-global.css">
+</head>
+<body>
+
+
+    <div class="container">
+        
+
+        <div class="cont">
+
+    <img src="img/flor-png.png" class="flor">
+    <img src="img/sol-png.png" class="sol">
+
+            <div class="logo">
+                <a href="index.html">
+                <img src="img/Cópia de MAKING RPG.png" alt="Making RPG - ir para a página inicial"></a>
+            </div>
+
+    <header>
+            <nav class="menu" aria-label="Menu principal">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menuLista"
+                >
+                    <span class="icone-menu" aria-hidden="true">☰</span>
+                    <span class="texto-menu">Menu</span>
+                </button>
+
+                <ul id="menuLista">
+
+                    <li>
+                        <a href="fichas.html">Fichas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="campanhas.html">Campanhas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="mapas.html">Mapas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="missoes.html">Missões</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </header>
+
+    <!-- BEM-VINDO -->
+
+    <section class="bemvindo" aria-labelledby="titulo-bemvindo">
+
+        <h1 id="titulo-bemvindo">Bem-Vinda(o)!</h1>
+
+        <div class="divisor" aria-hidden="true">
+            <img src="img/decor_menu.png" alt="">
+        </div>
+
+        <p>Desenvolvemos o Making RPG Project, uma plataforma criada para auxiliar mestres e jogadores no processo de criação e desenvolvimento de campanhas de RPG.</p>
+        <br>
+        <p>A plataforma busca ajudar na elaboração de personagens, cenários, lugares, narrativas, conflitos e outros elementos essenciais para a construção de um universo de RPG oferecendo suporte à criatividade e ao pensamento durante o planejamento de aventuras.</p>
+        <br>
+        <p>O Making RPG Project tem como proposta utilizar a geração de conteúdo como ferramenta de apoio à imaginação, permitindo que ideias sejam desenvolvidas, organizadas e transformadas em experiências narrativas. Mais do que oferecer sugestões prontas, buscamos estimular o pensamento criativo e proporcionar novas possibilidades para aqueles que desejam criar suas próprias histórias!</p>
+
+
+        <!-- FOTO DO GRUPO -->
+
+        <div class="foto-grupo">
+            <div class="foto-vazia" role="img" aria-label="Espaço reservado para a foto do grupo">
+                <span>Foto do grupo</span>
+                <small>em breve</small>
+            </div>
+            <p class="legenda">Equipe do Making RPG Project</p>
+        </div>
+
+    </section>
+            
+        </div>
+        
+    </div>
+
+            <footer class="footer">
+    <span>© 2026 Making RPG Project. Todos os direitos reservados.</span>
+    <span class="footer__sep"><img src="img/decor_menu.png" alt="decoração do footer"></span>
+        <a href="https://mail.google.com/mail/?view=cm&to=tccmakingrpgproject@gmail.com" target="_blank" rel="noopener">
+        <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="2"/>
+        <path d="M3 7l9 6 9-6"/>
+        </svg>
+        tccmakingrpgproject@gmail.com
+    </a>
+    </footer>
+
+    <script src="menu.js" defer></script>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app',
+            'https://vlibras.gov.br/config/default_logo.json',
+            'random',
+            'R'
+        );
+    </script>
+
+</body>
+</html>

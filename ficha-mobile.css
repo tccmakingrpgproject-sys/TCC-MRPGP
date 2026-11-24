@@ -1,0 +1,406 @@
+/* FICHA - RESPONSIVO */
+
+.nav-mobile {
+    display: none;
+}
+
+@media (max-width: 850px) {
+
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    button {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+    /* CONTAINER */
+
+    .container {
+        width: calc(100% - 16px);
+        max-width: 760px;
+        margin: 8px auto calc(88px + env(safe-area-inset-bottom, 0px));
+        padding: 16px 14px;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        column-gap: 0;
+        row-gap: 14px;
+        align-items: start;
+        justify-items: stretch;
+    }
+
+    .logo {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        margin-bottom: 0;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    header {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+    }
+
+    .menu {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu a {
+        height: 40px;
+    }
+
+
+    /* FOTO / NOME / STATUS */
+
+    .container-foto {
+        grid-column: 1;
+        grid-row: 3;
+        width: 207px;
+        justify-self: center;
+        margin: 0;
+    }
+
+    .nome {
+        grid-column: 1;
+        grid-row: 4;
+        width: 100%;
+        max-width: 340px;
+        justify-self: center;
+        align-self: start;
+        margin: 0;
+    }
+
+    .nome .button-salvar {
+        height: 44px;
+        margin-top: 0;
+    }
+
+    .status-container {
+        grid-column: 1;
+        grid-row: 5;
+        width: 100%;
+        max-width: 340px;
+        justify-self: center;
+        margin: 0;
+        padding: 12px;
+    }
+
+    .status-row {
+        height: 44px;
+        padding: 0 14px;
+        margin-bottom: 8px;
+    }
+
+    .status-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .status-name {
+        font-size: 19px;
+    }
+
+    .number {
+        font-size: 21px;
+        min-width: 24px;
+    }
+
+    .separator {
+        font-size: 21px;
+    }
+
+    .status-row .change-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+
+    .upload-button,
+    .create-button {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .remove-button {
+        height: 40px;
+    }
+
+
+    /* ÁREA PRINCIPAL */
+
+    .paginas {
+        grid-column: 1 / -1;
+        grid-row: 6;
+        width: 100%;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 0;
+    }
+
+    .menu-lateral {
+        order: -1;
+        width: 100%;
+        display: block;
+        margin: 0;
+    }
+
+    .menu-lateral > .menu-botao-ficha {
+        display: none;
+    }
+
+    .menu-lateral .atributos {
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 58px);
+        justify-content: space-evenly;
+        row-gap: 14px;
+    }
+
+    .atributo input {
+        font-size: 20px;
+    }
+
+    .conteudo-principal {
+        grid-column: 1;
+        width: 100%;
+        height: auto;
+        min-height: 360px;
+        overflow: hidden;
+        padding: 58px 14px 22px;
+        scroll-margin-top: 8px;
+    }
+
+    .titulo-container h1 {
+        font-size: 30px;
+    }
+
+    #conteudo {
+        height: auto;
+        overflow: visible;
+        padding-right: 0;
+    }
+
+
+    /* PERÍCIAS */
+
+    .pericias-container {
+        height: auto;
+    }
+
+    .pericias-lista {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .pericia {
+        min-height: 46px;
+        font-size: 19px;
+        gap: 10px;
+    }
+
+    .pericia-numero {
+        width: 72px;
+        height: 44px;
+        font-size: 22px;
+        flex-shrink: 0;
+    }
+
+
+    /* HISTÓRIA */
+
+    .historia-bloco h2,
+    .desvantagens h2 {
+        font-size: 20px;
+    }
+
+    .historia textarea {
+        height: 110px;
+        font-size: 16px;
+        resize: vertical;
+    }
+
+    .desvantagens-lista {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 12px;
+        row-gap: 0;
+    }
+
+    .desvantagem {
+        min-height: 42px;
+        gap: 8px;
+        font-size: 16px;
+    }
+
+    .desvantagem input {
+        flex-shrink: 0;
+    }
+
+
+    /* INVENTÁRIO / ATAQUES */
+
+    .criar-registro {
+        min-height: 44px;
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+
+    .item-inventario,
+    .registro-card {
+        padding: 12px;
+    }
+
+    .item-inventario-nome,
+    .registro-nome {
+        padding-right: 92px;
+        min-height: 34px;
+    }
+
+    .item-inventario-info,
+    .registro-info {
+        min-height: 52px;
+        font-size: 16px;
+    }
+
+    .remover-registro {
+        top: 8px;
+        right: 8px;
+        min-height: 34px;
+        padding: 6px 11px;
+        font-size: 13px;
+    }
+
+
+    /* BARRA DE NAVEGAÇÃO INFERIOR */
+
+    .nav-mobile {
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1000;
+        padding: 8px 8px calc(8px + env(safe-area-inset-bottom, 0px));
+        background: #929262;
+        border-radius: 18px 18px 0 0;
+        box-shadow: 0 -4px 14px rgba(0, 0, 0, .25);
+        box-sizing: border-box;
+    }
+
+    .nav-mobile button {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 140px;
+        min-height: 48px;
+        padding: 4px 2px;
+        background: transparent;
+        color: #fff;
+        font-style: normal;
+        font-size: 16px !important;
+        line-height: 1.1;
+        border-radius: 12px;
+        transition: background .15s;
+    }
+
+    .nav-mobile button.ativo {
+        background: #A4B080;
+    }
+
+    .nav-mobile button:focus-visible {
+        outline: 2px solid #2F301D;
+        outline-offset: 1px;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 850px) {
+
+    .container {
+        grid-template-columns: 207px minmax(0, 1fr);
+        column-gap: 20px;
+    }
+
+    .container-foto {
+        grid-column: 1;
+        grid-row: 3 / span 2;
+        justify-self: start;
+    }
+
+    .nome {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .status-container {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .paginas {
+        grid-column: 1 / -1;
+        grid-row: 5;
+    }
+
+    .menu-lateral .atributos {
+        max-width: 480px;
+        grid-template-columns: repeat(6, 58px);
+    }
+}
+
+
+/* Celular pequeno */
+
+@media (max-width: 599px) {
+
+    .desvantagens-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .container {
+        padding: 14px 10px;
+    }
+
+    .nav-mobile button {
+        font-size: 14px !important;
+    }
+
+    .pericia {
+        font-size: 17px;
+    }
+}
+
+
+@media (min-width: 480px) and (max-width: 599px) {
+
+    .menu-lateral .atributos {
+        max-width: 420px;
+        grid-template-columns: repeat(6, 58px);
+    }
+}

@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', sans-serif;
+    background-color: darkolivegreen;
+}
+
+/* Logo */
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo img{
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container Principal */
+
+.container{
+    background-color: #F1DCA7;
+    width: 92%;
+    max-width: 1250px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.cont{
+    background-color: #F1DCA7;
+    min-height: 380px;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+}
+
+
+/* Menu */
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    max-width: 900px;
+
+    padding: 12px;
+    border-radius: 40px;
+
+    background-color: #929262;
+}
+
+.menu a{
+    width: 100px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: white;
+
+    border-radius: 10px;
+    background-color: #A4B080;
+
+    font-family: "Almendra";
+    font-weight: bold;
+}
+
+.bnt-fichas{
+    position: absolute;
+
+    background: #96975F;
+    color: white;
+
+    border: 2px solid #6E7047;
+    border-radius: 10px;
+
+    padding: 4px 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Almendra";
+}
+
+
+/* TÍTULOS */
+
+.container h1{
+    font-family: "Almendra";
+    color: #666642;
+    font-size: 50px;
+}
+
+.arquetipos h1{
+    font-family: "Almendra";
+    color: #666642;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.arquetipos h2{
+    font-family: "Almendra";
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    background-color: #76835360;
+    padding: 12px;
+    border-radius: 50px;
+    width: fit-content;
+    min-width: 130px;
+    max-width: 100%;
+    line-height: 1.2;
+    padding: 12px 28px;
+}
+
+.arquetipos p{
+    color: #5c5c3a7a;
+    margin-bottom: 30px;
+}
+
+
+/* CARDS */
+
+.carousel{
+    display: flex;
+    gap: 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 12px 4px 22px;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+
+    scrollbar-width: thin;
+    scrollbar-color: #929262 rgba(0,0,0,.08);
+
+    cursor: grab;
+}
+
+.carousel.arrastando{
+    cursor: grabbing;
+    scroll-behavior: auto;
+    user-select: none;
+}
+
+.carousel::-webkit-scrollbar{
+    height: 10px;
+}
+
+.carousel::-webkit-scrollbar-track{
+    background: rgba(0,0,0,.08);
+    border-radius: 20px;
+}
+
+.carousel::-webkit-scrollbar-thumb{
+    background: #929262;
+    border-radius: 20px;
+}
+
+.card{
+    flex: 0 0 260px;
+    height: 380px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #909c63ad;
+    border-radius: 18px;
+
+    padding: 20px;
+
+    cursor: pointer;
+
+    transition: flex-basis .45s ease, background .3s, box-shadow .3s;
+
+    box-shadow: 0 10px 20px rgba(0,0,0,.08);
+
+    overflow: hidden;
+}
+
+.card:focus-visible{
+    outline: 3px solid #2F301D;
+    outline-offset: 2px;
+}
+
+.card h2{
+    flex-shrink: 0;
+    font-family: "Almendra";
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #545437;
+}
+
+.card:not(.active)::after{
+    content: "Toque para ver detalhes";
+    margin-top: auto;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #545437;
+    opacity: .75;
+}
+
+
+/* CARD ATIVO */
+
+.card.active{
+    flex: 0 0 420px;
+
+    background: #7F8155;
+    color: white;
+
+    box-shadow: 0 0 15px rgba(212,175,55,.6);
+}
+
+.card.active h2{
+    color: #29291a;
+}
+
+
+/* CONTEÚDO + SCROLL VERTICAL */
+
+.content{
+    flex: 1;
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding-right: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s ease;
+
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: thin;
+    scrollbar-color: #F1DCA7 rgba(0,0,0,.2);
+}
+
+.card.active .content{
+    opacity: 1;
+    visibility: visible;
+}
+
+.content::-webkit-scrollbar{
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-track{
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb{
+    background: #F1DCA7;
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb:hover{
+    background: #fdc91d;
+}
+
+
+/* TEXTO */
+
+.content p{
+    font-family: sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.vantagens,
+.desvantagens{
+    display: inline-block;
+    margin-top: 12px;
+
+    color: #fdc91d;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.card.selected{
+    box-shadow: 0 0 15px rgba(212,175,55,.6);
+}
+
+
+/* BOTÃO ATRIBUTOS */
+
+.acoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+.dica{
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #666642;
+    text-align: center;
+}
+
+.dica.aviso{
+    color: #8a2c1f;
+    font-weight: bold;
+}
+
+.btn-atributos{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 44px;
+    padding: 10px 18px;
+    width: fit-content;
+
+    border-radius: 10px;
+    border: 2px solid #6E7047;
+
+    background: #96975F;
+    color: white;
+
+    font-family: "Almendra";
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (hover: hover){
+
+    .btn-atributos:hover{
+        background: #6E7047;
+    }
+
+}
+
+.btn-atributos:active{
+    background: #555632;
+}
+
+.btn-atributos.desativado{
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+@media (hover: hover){
+
+    .btn-atributos.desativado:hover{
+        background: #96975F;
+    }
+
+}
+
+
+/* TABLET */
+
+@media (max-width:1024px){
+
+    .card{
+        flex: 0 0 260px;
+    }
+
+    .card.active{
+        flex: 0 0 380px;
+    }
+
+}
+
+
+/* TABLET / CELULAR */
+
+@media (max-width:768px){
+
+    body{
+        padding: 20px;
+    }
+
+    .card{
+        flex: 0 0 70vw;
+    }
+
+    .card.active{
+        flex: 0 0 84vw;
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width:480px){
+
+    .container{
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .cont{
+        padding: 15px;
+    }
+
+    .logo img{
+        width: 140px;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        gap: 8px;
+
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .menu a{
+        width: 100%;
+        max-width: 220px;
+        height: 40px;
+    }
+
+    .container h1,
+    .arquetipos h1{
+        font-size: 38px;
+    }
+
+    .card{
+        height: 400px;
+    }
+
+    .btn-atributos{
+        width: 100%;
+    }
+
+}

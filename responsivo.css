@@ -1,0 +1,45 @@
+html{
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body{
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+}
+
+.container{
+    flex: 1 0 auto;
+
+    margin-top: clamp(20px, 4vw, 40px);
+    margin-bottom: clamp(20px, 4vw, 40px);
+
+    padding: clamp(15px, 4vw, 40px);
+
+    border-radius: clamp(18px, 3vw, 25px);
+
+    align-content: start;
+}
+
+img, video{
+    max-width: 100%;
+}
+
+@media (min-width: 1600px){
+    .container{
+        max-width: 1400px;
+    }
+}
+
+@media (pointer: coarse){
+    button,
+    .aba,
+    .bnt-fichas{
+        min-height: 40px;
+    }
+}

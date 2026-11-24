@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arquetipos.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <title>Arquétipos - Druida</title>
+    <link rel="stylesheet" href="navegacao-paginas.css">
+    <link rel="stylesheet" href="padrao-acessibilidade.css">
+    <link rel="stylesheet" href="menu-ajuste.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-making-rpg.png">
+    <link rel="stylesheet" href="identidade-global.css">
+</head>
+<body>
+    <div class="container">
+    <div class="lateral"></div>
+     <div class="logo">
+            <a href="index.html">
+                <img src="img/Cópia de MAKING RPG.png" alt="Making RPG - ir para a página inicial"></a>
+
+            </div>
+
+    <header>
+            <nav class="menu" aria-label="Menu principal">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menuLista"
+                >
+                    <span class="icone-menu" aria-hidden="true">☰</span>
+                    <span class="texto-menu">Menu</span>
+                </button>
+
+                <ul id="menuLista">
+
+                    <li>
+                        <a href="fichas.html" aria-current="page">Fichas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="campanhas.html">Campanhas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="mapas.html">Mapas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="missoes.html">Missões</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </header>
+
+    <div class="arquetipos">
+    <h1>Arquétipos</h1>
+    <h2>Druida</h2>
+    </div>
+
+    <div class="carousel">
+
+    <div class="card" data-id="1">
+        <h2>Círculo da Terra</h2>
+
+        <div class="content">
+            <p>
+                Druidas que dedicam suas vidas à proteção de um ambiente específico, como florestas, desertos, montanhas, pântanos ou campos. Sua conexão com a natureza é tão profunda que conseguem canalizar a energia do próprio terreno, tornando-se mestres da magia e guardiões do equilíbrio natural.
+                <br>
+                <span class="vantagens">Vantagens:</span> Recupera parte da energia mágica mais facilmente durante descansos e recebe bônus em magias relacionadas ao terreno ao qual pertence.
+                <br>
+                <span class="desvantagens">Desvantagens:</span> Longe de seu ambiente natural, algumas magias perdem eficácia e sua conexão com a natureza se torna mais fraca.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card" data-id="2">
+        <h2>Círculo da Lua</h2>
+
+        <div class="content">
+            <p>
+                Esses druidas enxergam a Forma Selvagem como sua maior força. Em vez de depender apenas de magias, transformam-se em criaturas ferozes para enfrentar inimigos diretamente, lutando com garras, presas e instintos animais.
+                <br>
+                <span class="vantagens">Vantagens:</span> Pode assumir formas mais fortes, transformar-se mais rapidamente e recuperar parte da vida enquanto está transformado.
+                <br>
+                <span class="desvantagens">Desvantagens:</span> Após permanecer muito tempo transformado ou sofrer grande estresse, pode agir por impulso, dificultando ações que exijam raciocínio ou diplomacia.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card" data-id="3">
+        <h2>Círculo do Pastor</h2>
+
+        <div class="content">
+            <p>
+                Druidas que servem como intermediários entre o mundo natural e os espíritos da floresta. Invocam entidades espirituais e totens sagrados para proteger aliados, fortalecer companheiros e guiar criaturas da natureza durante o combate.
+                <br>
+                <span class="vantagens">Vantagens:</span> Pode invocar espíritos que concedem cura, proteção ou aumento de força para aliados e criaturas convocadas.
+                <br>
+                <span class="desvantagens">Desvantagens:</span> Seu potencial de dano direto é menor, dependendo mais do trabalho em equipe e de invocações para alcançar todo seu poder.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card" data-id="4">
+        <h2>Círculo dos Esporos</h2>
+
+        <div class="content">
+            <p>
+                Esses druidas acreditam que a morte e a decomposição são partes essenciais do ciclo da vida. Eles manipulam fungos, esporos e formas microscópicas de vida para espalhar doenças, enfraquecer inimigos e até reanimar corpos temporariamente, mostrando que até a morte pode gerar nova vida.
+                <br>
+                <span class="vantagens">Vantagens:</span> Inimigos próximos sofrem dano necrótico contínuo, e o druida recebe maior resistência em combate corpo a corpo. Também pode animar mortos temporariamente.
+                <br>
+                <span class="desvantagens">Desvantagens:</span> Sua presença causa desconforto em animais e pessoas comuns, e seus poderes têm eficácia reduzida em ambientes extremamente puros ou sagrados.
+            </p>
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="acoes">
+        <p class="dica" id="dicaAtributos">Deslize para o lado para ver todos os arquétipos e toque em um card para ler os detalhes.</p>
+        <a href="atributos.html" class="btn-atributos desativado" id="btnAtributos" aria-disabled="true">Atributos &rarr;</a>
+    </div>
+
+    <div class="lateral"></div>
+
+</div>
+
+<script src="arquetipos.js"></script>
+<script src="atributos.js"></script>
+    <script src="navegacao-paginas.js" defer></script>
+    <script src="menu.js" defer></script>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app',
+            'https://vlibras.gov.br/config/default_logo.json',
+            'random',
+            'R'
+        );
+    </script>
+
+
+    <footer class="footer">
+        <span>© 2026 Making RPG Project. Todos os direitos reservados.</span>
+        <span class="footer__sep"><img src="img/decor_menu.png" alt=""></span>
+        <a href="https://mail.google.com/mail/?view=cm&to=tccmakingrpgproject@gmail.com" target="_blank" rel="noopener">
+            <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="M3 7l9 6 9-6"/>
+            </svg>
+            tccmakingrpgproject@gmail.com
+        </a>
+    </footer>
+
+</body>
+</html>

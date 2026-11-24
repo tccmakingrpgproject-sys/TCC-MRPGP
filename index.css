@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: darkolivegreen;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+/* Logo */
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo img{
+    width: 180px;
+    max-width: 100%;
+}
+
+/* Container Principal */
+
+.container{
+    background-color: #D08C60;
+    width: 96%;
+    max-width: 1400px;
+    margin: 24px auto;
+    padding: 14px;
+    border-radius: 32px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cont{
+    background-color: #F1DCA7;
+    flex: 1;
+    min-height: 380px;
+    padding: 40px 40px 90px;
+    border-radius: 18px;
+    position: relative;
+}
+
+/* Menu */
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    max-width: 860px;
+
+    padding: 12px;
+    border-radius: 40px;
+
+    background-color: #929262;
+}
+
+.menu a{
+    width: 100px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: white;
+
+    border-radius: 10px;
+    background-color: #A4B080;
+
+    font-family: "Almendra";
+    font-weight: bold;
+
+}
+
+
+/* Decorações */
+
+.decor{
+    width: 15px;
+    position: relative;
+    top: -2px;
+}
+
+.decoracao{
+    position: absolute;
+}
+
+
+.flor{
+    position: absolute;
+    width: 160px;
+    top: -26px;
+    right: -44px;
+    z-index: 100;
+}
+
+.sol{
+    position: absolute;
+    width: 120px;
+    bottom: -40px;
+    left: -34px;
+    z-index: 100;
+}
+
+/* Bem-Vindo */
+
+.bemvindo{
+    background-color: #A4B080;
+    color: white;
+
+    width: 95%;
+    margin: 0 auto;
+
+    border-radius: 30px;
+    padding: 36px 56px 40px;
+}
+
+.bemvindo h1{
+    font-family: "Almendra";
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 10px;
+    color: #3f2d1f;
+}
+
+.divisor{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 320px;
+    margin: 0 auto 10px;
+}
+
+.divisor::before,
+.divisor::after{
+    content: "";
+    flex: 1;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #3f2d1f;
+    opacity: 0.35;
+}
+
+.divisor img{
+    width: 20px;
+}
+
+.bemvindo .divisor{
+    margin-bottom: 28px;
+}
+
+.bemvindo p.legenda{
+    text-align: center;
+    font-size: 16px;
+    color: #3f2d1f;
+    margin-top: 12px;
+}
+
+.bemvindo p{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 20px;
+    font-family: Arial;
+    color: #1b1b0f;
+}
+
+/* Foto do grupo */
+
+.foto-grupo{
+    margin-top: 30px;
+}
+
+.foto-grupo img,
+.foto-vazia{
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 460px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+.foto-grupo img{
+    border: 5px solid #F1DCA7;
+    box-shadow: 0 8px 20px rgba(63, 45, 31, 0.25);
+}
+
+.foto-vazia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    background-color: rgba(241, 220, 167, 0.45);
+    border: 3px dashed #555632;
+    color: #3f2d1f;
+
+    font-family: "Almendra";
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.foto-vazia small{
+    font-family: Arial;
+    font-size: 0.9rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 900px;
+  margin: 15px auto 24px;
+  padding: 18px 32px;
+  background: rgb(52, 66, 28);
+  border-radius: 999px;
+  color: #fff;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.footer__sep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 0;   
+  margin: 0 4px;
+}
+
+.footer__sep img {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 0;
+  border-radius: 10px;
+  transition: filter 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  .footer {
+    border-radius: 28px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer__sep { display: none; }
+}
+
+/* Tablet */
+
+@media (max-width: 768px){
+
+    .container{
+        width: 98%;
+        margin: 12px auto;
+        padding: 10px;
+        border-radius: 26px;
+    }
+
+    .cont{
+        padding: 20px 20px 90px;
+        border-radius: 16px;
+    }
+
+    .logo img{
+        width: 140px;
+    }
+
+    .menu ul{
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .bemvindo{
+        padding: 28px 34px 32px;
+    }
+
+    .bemvindo h1{
+        font-size: 2rem;
+    }
+
+    .bemvindo p{
+        font-size: 1rem;
+    }
+
+    .flor{
+        width: 100px;
+        top: -20px;
+        right: -20px;
+    }
+
+    .sol{
+        width: 100px;
+        left: -16px;
+        bottom: -16px;
+    }
+}
+
+/* Celular */
+
+@media (max-width: 480px){
+
+    .container{
+        margin: 10px auto;
+        padding: 8px;
+        border-radius: 22px;
+    }
+
+    .cont{
+        padding: 15px 15px 60px;
+        border-radius: 14px;
+    }
+
+    .logo img{
+        width: 120px;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        border-radius: 20px;
+        gap: 8px;
+    }
+
+    .menu a{
+        width: 200px;
+    }
+
+    .bemvindo{
+        padding: 24px 22px 26px;
+    }
+
+    .foto-vazia{
+        font-size: 1.3rem;
+    }
+
+    .bemvindo h1{
+        font-size: 1.7rem;
+    }
+
+    .bemvindo p{
+        font-size: 0.9rem;
+    }
+
+    .flor{
+        width: 80px;
+        right: -13px;
+    }
+
+    .sol{
+        width: 80px;
+    }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha - Atributos</title>
+    <link rel="stylesheet" href="atributos.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <link rel="stylesheet" href="padrao-acessibilidade.css">
+    <link rel="stylesheet" href="navegacao-paginas.css">
+    <link rel="stylesheet" href="menu-ajuste.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-making-rpg.png">
+    <link rel="stylesheet" href="identidade-global.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="cont">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/Cópia de MAKING RPG.png" alt="Making RPG - ir para a página inicial">
+                </a>
+            </div>
+
+            <header>
+            <nav class="menu" aria-label="Menu principal">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menuLista"
+                >
+                    <span class="icone-menu" aria-hidden="true">☰</span>
+                    <span class="texto-menu">Menu</span>
+                </button>
+
+                <ul id="menuLista">
+
+                    <li>
+                        <a href="fichas.html" aria-current="page">Fichas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="campanhas.html">Campanhas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="mapas.html">Mapas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="missoes.html">Missões</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </header>
+
+            <h1>Atributos</h1>
+            <p>Clique nos números para alterar os valores.</p>
+
+            <div class="atributos">
+
+                <div class="atributo for">
+                    <input type="number" min="0" max="6" id="for" value="1" inputmode="numeric" aria-label="Força">
+                    <span>FOR</span>
+                </div>
+
+                <div class="atributo des">
+                    <input type="number" min="0" max="6" id="des" value="1" inputmode="numeric" aria-label="Destreza">
+                    <span>DES</span>
+                </div>
+
+                <div class="atributo con">
+                    <input type="number" min="0" max="6" id="con" value="1" inputmode="numeric" aria-label="Constituição">
+                    <span>CONS</span>
+                </div>
+
+                <div class="atributo int">
+                    <input type="number" min="0" max="6" id="int" value="1" inputmode="numeric" aria-label="Intenção">
+                    <span>INT</span>
+                </div>
+
+                <div class="atributo von">
+                    <input type="number" min="0" max="6" id="von" value="1" inputmode="numeric" aria-label="Vontade">
+                    <span>VON</span>
+                </div>
+
+                <div class="atributo car">
+                    <input type="number" min="0" max="6" id="car" value="1" inputmode="numeric" aria-label="Carisma">
+                    <span>CAR</span>
+                </div>
+
+                <div class="centro">
+                    <img src="img/sol-png.png" alt="Atributos">
+                </div>
+
+            </div>
+
+            <ul class="legenda" aria-label="Legenda dos atributos">
+                <li><strong>FOR</strong> Força</li>
+                <li><strong>DES</strong> Destreza</li>
+                <li><strong>CONS</strong> Constituição</li>
+                <li><strong>INT</strong> Intenção</li>
+                <li><strong>VON</strong> Vontade</li>
+                <li><strong>CAR</strong> Carisma</li>
+            </ul>
+
+            <button class="bnt-arquetipos" id="btnProximo">Arquétipos</button>
+
+        </div>
+
+    </div>
+
+    <script src="atributos.js"></script>
+    <script src="finalizar-criacao.js"></script>
+    <script src="menu.js" defer></script>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app',
+            'https://vlibras.gov.br/config/default_logo.json',
+            'random',
+            'R'
+        );
+    </script>
+
+    <script src="navegacao-paginas.js" defer></script>
+
+    <footer class="footer">
+        <span>© 2026 Making RPG Project. Todos os direitos reservados.</span>
+        <span class="footer__sep"><img src="img/decor_menu.png" alt=""></span>
+        <a href="https://mail.google.com/mail/?view=cm&to=tccmakingrpgproject@gmail.com" target="_blank" rel="noopener">
+            <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="M3 7l9 6 9-6"/>
+            </svg>
+            tccmakingrpgproject@gmail.com
+        </a>
+    </footer>
+
+</body>
+</html>

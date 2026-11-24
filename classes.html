@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="classes.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <script src="classes.js" defer></script>
+
+    <title>Ficha - Classes</title>
+    <link rel="stylesheet" href="navegacao-paginas.css">
+    <link rel="stylesheet" href="padrao-acessibilidade.css">
+    <link rel="stylesheet" href="menu-ajuste.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-making-rpg.png">
+    <link rel="stylesheet" href="identidade-global.css">
+</head>
+
+<body>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app',
+            'https://vlibras.gov.br/config/default_logo.json',
+            'random',
+            'R'
+        );
+    </script>
+
+    <div class="container">
+
+        <div class="lateral"></div>
+
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="index.html">
+                <img
+                    src="img/Cópia de MAKING RPG.png"
+                    alt="Making RPG - ir para a página inicial"
+                >
+            </a>
+        </div>
+
+        <!-- MENU -->
+        <header>
+            <nav class="menu" aria-label="Menu principal">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menuLista"
+                >
+                    <span class="icone-menu" aria-hidden="true">☰</span>
+                    <span class="texto-menu">Menu</span>
+                </button>
+
+                <ul id="menuLista">
+
+                    <li>
+                        <a href="fichas.html" aria-current="page">Fichas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="campanhas.html">Campanhas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="mapas.html">Mapas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="missoes.html">Missões</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </header>
+
+        <!-- CLASSES -->
+        <main class="cards">
+
+            <h1>Classes</h1>
+
+            <!-- ALQUIMISTA -->
+            <div class="card-classes" data-classe="Alquimista">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Alquimista</h2>
+                        <p>alquimia, apotecário e prestidigitação</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Alquimista.jpg"
+                            alt="imagem de um alquimista"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Alquimista</h3>
+
+                        <p class="descricao-classe">
+                            Especialista em alquimia e preparação de
+                            substâncias, utilizando conhecimento e
+                            criatividade para auxiliar seus aliados.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BÁRBARO -->
+            <div class="card-classes" data-classe="Bárbaro">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Bárbaro</h2>
+                        <p>intimidação, sobrevivência e atletismo</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Barbaro.jpg"
+                            alt="imagem de um bárbaro"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Bárbaro</h3>
+
+                        <p class="descricao-classe">
+                            Guerreiro resistente que confia em sua força,
+                            resistência e ferocidade durante o combate.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BARDO -->
+            <div class="card-classes" data-classe="Bardo">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Bardo</h2>
+                        <p>artes, persuasão e diplomacia</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Bardo.jpg"
+                            alt="imagem de um bardo"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Bardo</h3>
+
+                        <p class="descricao-classe">
+                            Artista e aventureiro que utiliza sua presença,
+                            conhecimento e talento para influenciar situações.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- BRUXO -->
+            <div class="card-classes" data-classe="Bruxo">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Bruxo</h2>
+                        <p>religião, alquimia e arcanismo</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Bruxo.jpg"
+                            alt="imagem de um bruxo"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Bruxo</h3>
+
+                        <p class="descricao-classe">
+                            Usuário de conhecimentos sobrenaturais e
+                            poderes obtidos através de estudos e pactos.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CLÉRIGOS -->
+            <div class="card-classes" data-classe="Clérigos">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Clérigo</h2>
+                        <p>religião, intuição e persuasão</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Clerigo.jpg"
+                            alt="imagem de um clérigo"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Clérigo</h3>
+
+                        <p class="descricao-classe">
+                            Devotos que utilizam sua fé, conhecimento
+                            religioso e força espiritual para enfrentar
+                            ameaças.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- DRUIDA -->
+            <div class="card-classes" data-classe="Druida">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Druida</h2>
+                        <p>sobrevivência, apotecário e intuição</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Druida.jpg"
+                            alt="imagem de um druida"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Druida</h3>
+
+                        <p class="descricao-classe">
+                            Guardião da natureza, especializado em
+                            sobrevivência, conhecimento natural e
+                            preparação de recursos.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FEITICEIRO -->
+            <div class="card-classes" data-classe="Feiticeiro">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Feiticeiro</h2>
+                        <p>arcanismo, diplomacia e intuição</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Feiticeiro.jpg"
+                            alt="imagem de um feiticeiro"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Feiticeiro</h3>
+
+                        <p class="descricao-classe">
+                            Personagem dotado de poderes mágicos,
+                            utilizando sua afinidade sobrenatural para
+                            manipular o mundo ao seu redor.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- GUERREIRO -->
+            <div class="card-classes" data-classe="Guerreiro">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Guerreiro</h2>
+                        <p>atletismo, esquiva e intimidação</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Guerreiro.jpg"
+                            alt="imagem de um guerreiro"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Guerreiro</h3>
+
+                        <p class="descricao-classe">
+                            Combatente treinado para enfrentar seus
+                            adversários diretamente, utilizando força,
+                            técnica e resistência.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LADINO -->
+            <div class="card-classes" data-classe="Ladino">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Ladino</h2>
+                        <p>crime, furtividade e blefe</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Ladino.jpg"
+                            alt="imagem de um ladino"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Ladino</h3>
+
+                        <p class="descricao-classe">
+                            Especialista em furtividade, trapaças,
+                            infiltração e situações que exigem agilidade.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MAGO -->
+            <div class="card-classes" data-classe="Mago">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Mago</h2>
+                        <p>arcanismo, religião e intuição</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Mago.jpg"
+                            alt="imagem de um mago"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Mago</h3>
+
+                        <p class="descricao-classe">
+                            Estudioso das artes arcanas, capaz de utilizar
+                            conhecimento e preparação para dominar a magia.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MONGE -->
+            <div class="card-classes" data-classe="Monge">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Monge</h2>
+                        <p>religião, atletismo e esquiva</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Monge.jpg"
+                            alt="imagem de um monge"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Monge</h3>
+
+                        <p class="descricao-classe">
+                            Combatente disciplinado que utiliza controle
+                            corporal, técnica e agilidade.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- NOBRE -->
+            <div class="card-classes" data-classe="Nobre">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Nobre</h2>
+                        <p>intimidação, sobrevivência e atletismo</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Nobre.jpg"
+                            alt="imagem de um nobre"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Nobre</h3>
+
+                        <p class="descricao-classe">
+                            Um personagem acostumado à influência,
+                            autoridade e aos privilégios da alta sociedade.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PALADINO -->
+            <div class="card-classes" data-classe="Paladino">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Paladino</h2>
+                        <p>etiqueta, medicina e atletismo</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Paladino.jpg"
+                            alt="imagem de um paladino"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Paladino</h3>
+
+                        <p class="descricao-classe">
+                            Guerreiro guiado por seus princípios,
+                            combinando treinamento marcial e dedicação.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RANGER -->
+            <div class="card-classes" data-classe="Ranger">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Ranger</h2>
+                        <p>sobrevivência, furtividade e intuição</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Ranger.png"
+                            alt="imagem de um ranger"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Ranger</h3>
+
+                        <p class="descricao-classe">
+                            Explorador acostumado a ambientes selvagens,
+                            rastreamento e movimentação silenciosa.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SAMURAI -->
+            <div class="card-classes" data-classe="Samurai">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Samurai</h2>
+                        <p>atletismo, intimidação e percepção</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Samurai.jpg"
+                            alt="imagem de um samurai"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Samurai</h3>
+
+                        <p class="descricao-classe">
+                            Guerreiro disciplinado e especializado em
+                            técnicas de combate e percepção.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- VAMPIRO -->
+            <div class="card-classes" data-classe="Vampiro">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Vampiro</h2>
+                        <p>persuasão, esquiva e atletismo</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Vampiro.jpg"
+                            alt="imagem de um vampiro"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Vampiro</h3>
+
+                        <p class="descricao-classe">
+                            Criatura sobrenatural que combina presença,
+                            agilidade e capacidades físicas extraordinárias.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- VIKING -->
+            <div class="card-classes" data-classe="Viking">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Viking</h2>
+                        <p>sobrevivência, atletismo e diplomacia</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Viking.jpg"
+                            alt="imagem de um viking"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Viking</h3>
+
+                        <p class="descricao-classe">
+                            Guerreiro acostumado a viagens, sobrevivência
+                            e confrontos físicos.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- XAMÃ -->
+            <div class="card-classes" data-classe="Xamã">
+
+                <div class="card-resumo">
+                    <div class="card-titulo">
+                        <h2>Xamã</h2>
+                        <p>medicina, sobrevivência e religião</p>
+                    </div>
+                </div>
+
+                <div class="card-expandido">
+                    <div class="imagem-classe">
+                        <img
+                            src="img/Xamã.jpg"
+                            alt="imagem de um xamã"
+                        >
+                    </div>
+
+                    <div class="informacoes-classe">
+                        <h3>Xamã</h3>
+
+                        <p class="descricao-classe">
+                            Conhecedor de tradições, medicina e aspectos
+                            espirituais ligados à natureza.
+                        </p>
+
+                        <button class="btn-detalhes" type="button">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- DICA + BOTÃO PRÓXIMO -->
+            <div class="acoes">
+
+                <p
+                    class="dica"
+                    id="dicaClasse"
+                    aria-live="polite"
+                >
+                    Toque em um card para escolher sua classe.
+                </p>
+
+                <button
+                    class="bnt-atributos desativado"
+                    id="btnProximo"
+                    type="button"
+                    aria-disabled="true"
+                >
+                    Arquétipos &rarr;
+                </button>
+
+            </div>
+
+        </main>
+
+        <div class="lateral"></div>
+
+    </div>
+
+    <!-- MODAL -->
+    <div
+        class="modal-overlay"
+        id="modalOverlay"
+        role="presentation"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal-detalhes"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modalNome"
+            aria-describedby="modalDescricao"
+            tabindex="-1"
+        >
+
+            <!-- FECHAR -->
+            <button
+                class="fechar-modal"
+                id="fecharModal"
+                type="button"
+                aria-label="Fechar detalhes da classe"
+            >
+                ×
+            </button>
+
+            <!-- CABEÇALHO -->
+            <div class="modal-cabecalho">
+
+                <img
+                    id="modalImagem"
+                    src=""
+                    alt="Imagem da classe"
+                >
+
+                <div>
+                    <h2 id="modalNome">Classe</h2>
+
+                    <p id="modalDescricao">
+                        Descrição da classe.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- DADOS -->
+            <div class="dados-classe">
+
+                <div class="dado">
+                    <div>
+                        <span class="dado-titulo">Vida</span>
+                        <strong id="modalVida">—</strong>
+                    </div>
+                </div>
+
+                <div class="dado">
+                    <div>
+                        <span class="dado-titulo">Defesa</span>
+                        <strong id="modalDefesa">—</strong>
+                    </div>
+                </div>
+
+                <div class="dado">
+                    <div>
+                        <span class="dado-titulo">Sanidade</span>
+                        <strong id="modalSanidade">—</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PERÍCIAS -->
+            <div class="pericias">
+
+                <h3>Perícias</h3>
+
+                <div
+                    id="modalPericias"
+                    class="lista-pericias"
+                >
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="navegacao-paginas.js" defer></script>
+
+    <footer class="footer">
+        <span>© 2026 Making RPG Project. Todos os direitos reservados.</span>
+        <span class="footer__sep"><img src="img/decor_menu.png" alt=""></span>
+        <a href="https://mail.google.com/mail/?view=cm&to=tccmakingrpgproject@gmail.com" target="_blank" rel="noopener">
+            <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="M3 7l9 6 9-6"/>
+            </svg>
+            tccmakingrpgproject@gmail.com
+        </a>
+    </footer>
+
+</body>
+
+</html>

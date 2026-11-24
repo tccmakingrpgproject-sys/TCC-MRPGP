@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="stylesheet"
+        href="campanhas.css"
+    >
+    <link rel="stylesheet" href="padrao-acessibilidade.css">
+    <link rel="stylesheet" href="responsivo.css">
+
+    <title>Campanha</title>
+
+    <link rel="stylesheet" href="menu-ajuste.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-making-rpg.png">
+    <link rel="stylesheet" href="identidade-global.css">
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                <img
+                    src="img/Cópia de MAKING RPG.png"
+                    alt="Making RPG - ir para a página inicial"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- MENU PRINCIPAL -->
+
+        <header>
+            <nav class="menu" aria-label="Menu principal">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menuLista"
+                >
+                    <span class="icone-menu" aria-hidden="true">☰</span>
+                    <span class="texto-menu">Menu</span>
+                </button>
+
+                <ul id="menuLista">
+
+                    <li>
+                        <a href="fichas.html">Fichas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="campanhas.html" aria-current="page">Campanhas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="mapas.html">Mapas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="missoes.html">Missões</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </header>
+
+
+        <h1 class="titulo">Minha Campanha</h1>
+
+        <!-- NOME DA CAMPANHA -->
+
+        <form
+            class="campaign-name-bar"
+            id="campaignNameForm"
+        >
+
+            <a href="campanhas.html" class="campaign-back">
+                voltar
+            </a>
+
+            <label for="campaignNameInput">
+                Nome da campanha
+            </label>
+
+            <div class="campaign-name-row">
+
+                <input
+                    type="text"
+                    id="campaignNameInput"
+                    maxlength="60"
+                    placeholder="Digite o nome da sua campanha"
+                    autocomplete="off"
+                >
+
+                <button type="submit" class="campaign-name-save">
+                    Salvar nome
+                </button>
+
+            </div>
+
+            <p
+                id="campaignNameStatus"
+                class="campaign-name-status"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+        </form>
+
+        <!-- ABAS -->
+
+        <nav
+            class="tabs"
+            role="tablist"
+        >
+
+            <button
+                type="button"
+                class="tab active"
+                data-page="npcs"
+                role="tab"
+                aria-selected="true"
+            >
+                NPCs
+            </button>
+
+
+            <button
+                type="button"
+                class="tab"
+                data-page="missoes"
+                role="tab"
+                aria-selected="false"
+            >
+                Missões
+            </button>
+
+
+            <button
+                type="button"
+                class="tab"
+                data-page="mapas"
+                role="tab"
+                aria-selected="false"
+            >
+                Mapas
+            </button>
+
+        </nav>
+
+
+        <!-- PAINEL PRINCIPAL -->
+
+        <main class="main-panel">
+
+
+            <!-- PÁGINA NPCS -->
+
+            <section
+                id="page-npcs"
+                class="page active-page"
+            >
+
+                <div
+                    id="npcList"
+                    class="item-list"
+                ></div>
+
+
+                <div
+                    id="npcEmpty"
+                    class="empty-state"
+                >
+
+                    <button
+                        type="button"
+                        id="openNpcButton"
+                        class="empty-add-button"
+                    >
+                        Ir para ficha dos NPCs
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="addNpcButton"
+                    class="floating-add"
+                    aria-label="Adicionar NPC"
+                >
+                    +
+                </button>
+
+            </section>
+
+
+            <!-- PÁGINA MISSÕES -->
+
+            <section
+                id="page-missoes"
+                class="page"
+            >
+
+                <div
+                    id="missionList"
+                    class="item-list"
+                ></div>
+
+
+                <div
+                    id="missionEmpty"
+                    class="empty-state"
+                >
+
+                    <button
+                        type="button"
+                        id="openMissionButton"
+                        class="empty-add-button"
+                    >
+                        Adicionar missão
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="addMissionButton"
+                    class="floating-add"
+                    aria-label="Adicionar missão"
+                >
+                    +
+                </button>
+
+            </section>
+
+
+            <!-- PÁGINA MAPAS -->
+
+            <section
+                id="page-mapas"
+                class="page"
+            >
+
+                <div
+                    id="mapList"
+                    class="item-list"
+                ></div>
+
+
+                <div
+                    id="mapEmpty"
+                    class="empty-state"
+                >
+
+                    <button
+                        type="button"
+                        id="openMapButton"
+                        class="empty-add-button"
+                    >
+                        Adicionar mapa
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="addMapButton"
+                    class="floating-add"
+                    aria-label="Adicionar mapa"
+                >
+                    +
+                </button>
+
+            </section>
+
+        </main>
+
+
+        <!-- MODAL NPCS -->
+
+        <div id="npcModal" class="modal hidden">
+
+            <div class="modal-box"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="npcModalTitulo"
+                 aria-describedby="npcModalDescricao"
+                 tabindex="-1">
+
+                <button type="button" class="modal-close" data-close="npcModal"
+                        aria-label="Fechar janela de NPCs">
+                    <span aria-hidden="true">×</span>
+                </button>
+
+                <h2 id="npcModalTitulo">NPCs</h2>
+
+                <p class="modal-description" id="npcModalDescricao">
+                    Selecione um NPC para adicionar à campanha.
+                </p>
+
+                <div id="availableNpcs" class="available-list"></div>
+
+            </div>
+
+        </div>
+
+        <!-- MODAL MISSÕES -->
+
+        <div id="missionModal" class="modal hidden">
+
+            <div class="modal-box"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="missionModalTitulo"
+                 aria-describedby="missionModalDescricao"
+                 tabindex="-1">
+
+                <button type="button" class="modal-close" data-close="missionModal"
+                        aria-label="Fechar janela de missões">
+                    <span aria-hidden="true">×</span>
+                </button>
+
+                <h2 id="missionModalTitulo">Missões</h2>
+
+                <p class="modal-description" id="missionModalDescricao">
+                    Selecione uma missão para adicionar.
+                </p>
+
+                <div id="availableMissions" class="available-list"></div>
+
+            </div>
+
+        </div>
+
+        <!-- MODAL MAPAS -->
+
+        <div id="mapModal" class="modal hidden">
+
+            <div class="modal-box"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="mapModalTitulo"
+                 aria-describedby="mapModalDescricao"
+                 tabindex="-1">
+
+                <button type="button" class="modal-close" data-close="mapModal"
+                        aria-label="Fechar janela de mapas">
+                    <span aria-hidden="true">×</span>
+                </button>
+
+                <h2 id="mapModalTitulo">Mapas</h2>
+
+                <p class="modal-description" id="mapModalDescricao">
+                    Selecione um mapa para adicionar.
+                </p>
+
+                <div id="availableMaps" class="available-list"></div>
+
+            </div>
+
+        </div>
+
+        <!-- MODAL DETALHES -->
+
+        <div id="detailsModal" class="modal hidden">
+
+            <div class="modal-box details-modal"
+                 role="dialog"
+                 aria-modal="true"
+                 aria-labelledby="detailsTitulo"
+                 tabindex="-1">
+
+                <button type="button" class="modal-close" data-close="detailsModal"
+                        aria-label="Fechar detalhes">
+                    <span aria-hidden="true">×</span>
+                </button>
+
+                <div id="detailsContent"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGEM AMPLIADA -->
+
+        <div
+            id="lightbox"
+            class="lightbox"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Imagem ampliada"
+        >
+
+            <button
+                type="button"
+                class="fechar-lightbox"
+                id="fecharLightbox"
+                aria-label="Fechar imagem ampliada"
+            >
+                ×
+            </button>
+
+            <img id="imagemAmpliada" src="" alt="">
+
+        </div>
+
+    </div>
+
+
+    <script src="campanhas.js"></script>
+
+    <script src="menu.js" defer></script>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app',
+            'https://vlibras.gov.br/config/default_logo.json',
+            'random',
+            'R'
+        );
+    </script>
+
+
+    <footer class="footer">
+        <span>© 2026 Making RPG Project. Todos os direitos reservados.</span>
+        <span class="footer__sep"><img src="img/decor_menu.png" alt=""></span>
+        <a href="https://mail.google.com/mail/?view=cm&to=tccmakingrpgproject@gmail.com" target="_blank" rel="noopener">
+            <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="M3 7l9 6 9-6"/>
+            </svg>
+            tccmakingrpgproject@gmail.com
+        </a>
+    </footer>
+
+</body>
+
+</html>

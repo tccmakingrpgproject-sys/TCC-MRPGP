@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arquetipos.css">
+    <link rel="stylesheet" href="responsivo.css">
+    <title>Arquétipos - Samurais</title>
+    <link rel="stylesheet" href="navegacao-paginas.css">
+    <link rel="stylesheet" href="padrao-acessibilidade.css">
+    <link rel="stylesheet" href="menu-ajuste.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-making-rpg.png">
+    <link rel="stylesheet" href="identidade-global.css">
+</head>
+<body>
+    <div class="container">
+    <div class="lateral"></div>
+     <div class="logo">
+            <a href="index.html">
+                <img src="img/Cópia de MAKING RPG.png" alt="Making RPG - ir para a página inicial"></a>
+
+            </div>
+
+    <header>
+            <nav class="menu" aria-label="Menu principal">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                    aria-controls="menuLista"
+                >
+                    <span class="icone-menu" aria-hidden="true">☰</span>
+                    <span class="texto-menu">Menu</span>
+                </button>
+
+                <ul id="menuLista">
+
+                    <li>
+                        <a href="fichas.html" aria-current="page">Fichas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="campanhas.html">Campanhas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="mapas.html">Mapas</a>
+                    </li>
+
+                    <img src="img/decor_menu.png" class="decor" alt="">
+
+                    <li>
+                        <a href="missoes.html">Missões</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </header>
+
+    <div class="arquetipos">
+    <h1>Arquétipos</h1>
+    <h2>Samurais</h2>
+    </div>
+
+    <div class="carousel">
+
+    <div class="card" data-id="1">
+        <h2>Espírito Guerreiro</h2>
+
+        <div class="content">
+            <p>
+                Samurais que transformam sua determinação em força durante o combate. São guerreiros extremamente disciplinados, capazes de continuar lutando mesmo quando estão feridos ou em situações desfavoráveis.
+                <br>
+                <span class="vantagens">Vantagens:</span> Pode aumentar sua precisão durante momentos decisivos e ganhar resistência temporária, tornando-se mais difícil de derrotar.
+                <br>
+                <span class="desvantagens">Desvantagens:</span> Seu estado de determinação máxima pode ser utilizado apenas algumas vezes, fazendo com que seu desempenho diminua depois que seus recursos acabam.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card" data-id="2">
+        <h2>Mestre Espadachim</h2>
+
+        <div class="content">
+            <p>
+                Samurais que dedicaram suas vidas ao domínio absoluto da espada. Cada movimento é treinado para ser preciso e eficiente, transformando o combate em uma verdadeira arte.
+                <br>
+                <span class="vantagens">Vantagens:</span> Possui grande precisão e eficiência com espadas, podendo realizar técnicas avançadas e golpes extremamente precisos.
+                <br>
+                <span class="desvantagens">Desvantagens:</span> Seu treinamento é fortemente concentrado em armas de lâmina, tornando-o menos versátil quando precisa utilizar outros estilos de combate.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card" data-id="3">
+        <h2>Ronin</h2>
+
+        <div class="content">
+            <p>
+                O Samurai é um guerreiro que serve fielmente a um senhor ou clã, colocando honra e lealdade acima de seus próprios interesses. Já o Ronin é aquele que perdeu ou abandonou seu mestre e passou a viver de maneira independente, seguindo seu próprio caminho.
+                <br>
+                <span class="vantagens">Vantagens:</span> Samurais podem contar com a proteção, recursos e apoio de seu senhor ou clã. Ronins, por outro lado, possuem maior liberdade para tomar suas próprias decisões.
+                <br>
+                <span class="desvantagens">Desvantagens:</span> Um Samurai pode ser obrigado a cumprir ordens mesmo quando discorda delas. O Ronin perde o apoio e a proteção que teria pertencendo a um clã.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="card" data-id="4">
+        <h2>Cortês</h2>
+
+        <div class="content">
+            <p>
+                Samurais que dominam não apenas a espada, mas também a etiqueta, política e cultura. São guerreiros capazes de negociar, planejar batalhas e compreender as complexas relações entre os diferentes clãs.
+                <br>
+                <span class="vantagens">Vantagens:</span> Possui grande capacidade de planejamento, negociação e leitura das situações, podendo encontrar soluções antes que o conflito comece.
+                <br>
+                <span class="desvantagens">Desvantagens:</span> Por dividir seu treinamento entre combate, diplomacia e estratégia, não alcança o mesmo nível de especialização física de um Mestre Espadachim.
+            </p>
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="acoes">
+        <p class="dica" id="dicaAtributos">Deslize para o lado para ver todos os arquétipos e toque em um card para ler os detalhes.</p>
+        <a href="atributos.html" class="btn-atributos desativado" id="btnAtributos" aria-disabled="true">Atributos &rarr;</a>
+    </div>
+
+    <div class="lateral"></div>
+
+</div>
+
+<script src="arquetipos.js"></script>
+<script src="atributos.js"></script>
+    <script src="navegacao-paginas.js" defer></script>
+    <script src="menu.js" defer></script>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app',
+            'https://vlibras.gov.br/config/default_logo.json',
+            'random',
+            'R'
+        );
+    </script>
+
+
+    <footer class="footer">
+        <span>© 2026 Making RPG Project. Todos os direitos reservados.</span>
+        <span class="footer__sep"><img src="img/decor_menu.png" alt=""></span>
+        <a href="https://mail.google.com/mail/?view=cm&to=tccmakingrpgproject@gmail.com" target="_blank" rel="noopener">
+            <svg class="footer__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="M3 7l9 6 9-6"/>
+            </svg>
+            tccmakingrpgproject@gmail.com
+        </a>
+    </footer>
+
+</body>
+</html>

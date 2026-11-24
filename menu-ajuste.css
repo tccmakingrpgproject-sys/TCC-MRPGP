@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&display=swap');
+
+/* MENU - AJUSTES */
+
+:root {
+
+    /* LARGURA */
+    --menu-barra-largura: fit-content;
+    --menu-barra-max: 100%;
+    --menu-botao-largura: 100px;
+    --menu-botao-altura: 40px;
+    --menu-botao-fonte: 16px;
+    --menu-espaco: 12px;
+
+    /* ESPAÇO NAS PONTAS */
+    --menu-pontas: 56px;
+    --menu-barra-padding-vertical: 12px;
+
+    /* CORES */
+    --menu-barra-cor: #77784D;
+    --menu-botao-cor: #9BA879;
+    --menu-botao-hover: #6E7047;
+    --menu-botao-atual: #555632;
+    --menu-texto: #FFFFFF;
+}
+
+
+/* BARRA */
+
+.menu ul {
+    width: var(--menu-barra-largura);
+    max-width: var(--menu-barra-max);
+    gap: var(--menu-espaco);
+    padding: var(--menu-barra-padding-vertical) var(--menu-pontas);
+    background-color: var(--menu-barra-cor);
+    box-sizing: border-box;
+}
+
+
+/* BOTÕES */
+
+.menu a {
+    width: var(--menu-botao-largura);
+    min-height: var(--menu-botao-altura);
+    height: var(--menu-botao-altura);
+    font-family: "Almendra", serif;
+    font-size: var(--menu-botao-fonte);
+    font-weight: bold;
+    color: var(--menu-texto);
+    background-color: var(--menu-botao-cor);
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    background-color: var(--menu-botao-hover);
+}
+
+.menu a,
+.menu a:hover,
+.menu a:focus-visible,
+.menu a:active {
+    transform: none;
+    transition: background-color 0.2s ease;
+}
+
+.menu a:active {
+    background-color: var(--menu-botao-atual);
+}
+
+.menu a[aria-current="page"] {
+    background-color: var(--menu-botao-cor);
+    box-shadow: none;
+}
+
+.menu a[aria-current="page"]:hover,
+.menu a[aria-current="page"]:focus-visible {
+    background-color: var(--menu-botao-hover);
+}
+
+
+/* BOTÃO "MENU" */
+
+.menu-toggle {
+    background-color: var(--menu-barra-cor);
+    border-color: var(--menu-botao-hover);
+    color: var(--menu-texto);
+}
+
+.menu-toggle:active {
+    background-color: var(--menu-botao-hover);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 480px) {
+
+    .menu ul {
+        width: 100%;
+        max-width: none;
+        padding: 12px;
+    }
+
+    .menu a {
+        width: 100%;
+        max-width: none;
+        min-height: 44px;
+        height: auto;
+    }
+}

@@ -1,3 +1,8 @@
+/* TEMA CLARO */
+:root {
+    color-scheme: light only;
+}
+
 .footer {
     box-sizing: border-box;
     display: flex;
